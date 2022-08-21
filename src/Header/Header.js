@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import s from './Header.module.css';
 
-const BASE_URL = 'https://api.apilayer.com/exchangerates_data/latest';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 var myHeaders = new Headers();
-myHeaders.append('apikey', 'WoPRAuHIQna9lB5QWnrCer1lCFvrNLmk');
+myHeaders.append('apikey', process.env.REACT_APP_API_KEY);
 
 var requestOptions = {
   method: 'GET',

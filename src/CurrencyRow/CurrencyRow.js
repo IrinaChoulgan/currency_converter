@@ -9,7 +9,7 @@ export default function CurrencyRow(props) {
     <div>
       <input type="number" value={amount} onChange={onChangeAmount} className={s.input} />
       <select value={selectedCurrency} onChange={onChangeCurrency} className={s.select}>
-        {currencyOptions?.map((option) => (
+        {currencyOptions.map((option) => (
           <option key={shortid.generate()} value={option}>
             {option}
           </option>

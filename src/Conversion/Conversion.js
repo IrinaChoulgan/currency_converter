@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 import s from './Conversation.module.css';
 
-const BASE_URL = 'https://api.apilayer.com/exchangerates_data/latest';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 var myHeaders = new Headers();
-myHeaders.append('apikey', 'WoPRAuHIQna9lB5QWnrCer1lCFvrNLmk');
+myHeaders.append('apikey', process.env.REACT_APP_API_KEY);
 
 var requestOptions = {
   method: 'GET',
@@ -46,7 +46,7 @@ export default function Conversion() {
   }, []);
 
   useEffect(() => {
-    if (fromCurrency != null && toCurrency != null) {
+    if (fromCurrency !== undefined && toCurrency !== undefined) {
       fetch(`${BASE_URL}?symbols=${toCurrency}&base=${fromCurrency}`, requestOptions)
         .then((res) => res.json())
         .then((data) => setExchangeRate(data.rates[toCurrency]));
