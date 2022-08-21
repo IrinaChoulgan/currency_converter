@@ -1,18 +1,11 @@
 import CurrencyRow from '../CurrencyRow/CurrencyRow';
 import React, { useEffect, useState } from 'react';
 
+import requestOptions from '../reqest-options.js';
+
 import s from './Conversation.module.css';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-
-var myHeaders = new Headers();
-myHeaders.append('apikey', process.env.REACT_APP_API_KEY);
-
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
-};
 
 export default function Conversion() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
