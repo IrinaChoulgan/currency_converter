@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import s from './Header.module.css';
 
-import requestOptions from '../reqest-options.js';
+import requestOptions from '../request-options.js';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 

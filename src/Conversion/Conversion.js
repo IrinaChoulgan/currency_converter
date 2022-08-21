@@ -1,7 +1,7 @@
 import CurrencyRow from '../CurrencyRow/CurrencyRow';
 import React, { useEffect, useState } from 'react';
 
-import requestOptions from '../reqest-options.js';
+import requestOptions from '../request-options.js';
 
 import s from './Conversation.module.css';
 
