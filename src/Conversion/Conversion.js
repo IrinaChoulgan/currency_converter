@@ -9,9 +9,9 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function Conversion() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
-  const [fromCurrency, setFromCurrency] = useState();
-  const [toCurrency, setToCurrency] = useState();
-  const [exchangeRate, setExchangeRate] = useState();
+  const [fromCurrency, setFromCurrency] = useState('USD');
+  const [toCurrency, setToCurrency] = useState('EUR');
+  const [exchangeRate, setExchangeRate] = useState([]);
   const [amount, setAmout] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
