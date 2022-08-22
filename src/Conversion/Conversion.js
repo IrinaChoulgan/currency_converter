@@ -5,7 +5,7 @@ import requestOptions from '../request-options.js';
 
 import s from './Conversation.module.css';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = 'https://api.apilayer.com/exchangerates_data/latest?';
 
 export default function Conversion() {
   const [currencyOptions, setCurrencyOptions] = useState([]);

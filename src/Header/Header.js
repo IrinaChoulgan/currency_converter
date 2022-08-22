@@ -3,7 +3,7 @@ import s from './Header.module.css';
 
 import requestOptions from '../request-options.js';
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = 'https://api.apilayer.com/exchangerates_data/latest?';
 
 export default function Header() {
   const fullDate = new Date();
